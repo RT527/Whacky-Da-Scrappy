@@ -16,15 +16,27 @@ body{
 }
 .title{
   margin-bottom: .5em;
-  font-size: 5em;
+  font-size: 4em;
   color:aqua;
   font-family: 'Press Start 2P', cursive;
+}
+.score-timer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .score{
   font-family: 'Creepster', cursive;
   font-size: 4.5em;
-  margin-bottom: .5em;
   color: green;
+  display: inline-block;
+  margin-right: 1em;
+}
+.timer{
+  font-family: 'Creepster', cursive;
+  font-size: 4.5em;
+  color: red;
+  display: inline-block;
 }
 .cursor{
   background-image: url('Scrappy_files/hammer.png');
@@ -72,31 +84,6 @@ body{
   75%{
     transform: translateX(-50%) translateY(0);
   }
-}
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.popup p {
-  font-size: 3em;
-  margin-bottom: 1em;
-}
-.popup button {
-  padding: 1em;
-  font-size: 1.5em;
-  background-color: aqua;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 

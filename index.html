@@ -12,8 +12,13 @@
 </head>
 <body>
   <h1 class="title"> Whacky-Da-Scrappy</h1>
-  <h2 class="score">SCORE: <span>00</span></h1>
-  <div class="timer">TIMER: <span id= "timeLeft">60</span></div>
+  <div class="score-timer">
+    <h2 class="score">SCORE: <span>00</span></h1> 
+    <div class="timer">TIMER: <span id= "timeLeft">60</span></div>
+  </div>
+  <div class="popup" id ="popup">
+    <button onclick="closeScore()">Close</button>
+  </div>
   <div class="board">
     <div class="hole"></div>
     <div class="hole"></div>
