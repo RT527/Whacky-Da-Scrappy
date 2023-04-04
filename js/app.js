@@ -28,11 +28,12 @@ const sounds = {
 const cursor = document.querySelector('.cursor')
 const holes = [...document.querySelectorAll('.hole')]
 const scoreEl = document.querySelector('.score span')
-
+const timerEl = document.querySelector('.timer span')
+const resetBtn = document.querySelector('rst-btn')
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
-/* let timeLeft = 60
-let intervalID = null */
+let timeLeft = 60
+let intervalID = null 
 /*----------------------------- Event Listeners -----------------------------*/
 window.addEventListener('mousemove', m => {
   cursor.style.top = m.pageY + 'px'
@@ -89,6 +90,26 @@ function run() {
     hole.removeChild(img)
     run()
   }, 1527);
+}
+//timer functions
+function updateTimer(time) {
+  const timerEl = document.querySelector('.timer span')
+  timerEl.textContent = time
+}
+
+function startTimer(dur) {
+  let timeLeft = dur
+  updateTimer(timeLeft)
+
+  const intervalID = setInterval(()=> {
+    timeLeft--
+    if (timeLeft <= 0) {
+      clearInterval(intervalID)
+      endGame()
+    } else {
+      updateTimer(timeLeft)
+    }
+  },999)
 }
 
 run()
