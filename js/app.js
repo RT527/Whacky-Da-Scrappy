@@ -29,11 +29,11 @@ const cursor = document.querySelector('.cursor')
 const holes = [...document.querySelectorAll('.hole')]
 const scoreEl = document.querySelector('.score span')
 const timerEl = document.querySelector('.timer span')
-const resetBtn = document.querySelector('.rst-btn')
+const resetBtn = document.getElementById('reset-btn')
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
 let timeLeft = 60
-let intervalID = null 
+let intervalID = null
 /*----------------------------- Event Listeners -----------------------------*/
 window.addEventListener('mousemove', m => {
   cursor.style.top = m.pageY + 'px'
@@ -48,7 +48,6 @@ window.addEventListener('mouseup',() =>{
 
 resetBtn.addEventListener('click',resetGame)
 /*-------------------------------- Functions --------------------------------*/
-
 //function to grab different songy
 function getRandoSong (soundGroup) {
   const songs = sounds[soundGroup]
@@ -58,8 +57,11 @@ function getRandoSong (soundGroup) {
 // pop up
 function showScore() {
   const finalScore = score
-  alert(`YOUR SCORE IS: ${finalScore}`)
-
+  if (score <= 0) {
+    alert(`YOU LOSE!! NO SCOOBY SNACKS! YOUR SCORE IS: ${finalScore}`)
+  } else {
+    alert(`YOU WIN!! HERE'S YOUR SCOOBY SNACK !🍪 YOUR SCORE IS: ${finalScore}`)
+  }
 }
 
 
