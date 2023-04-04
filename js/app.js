@@ -30,7 +30,6 @@ const holes = [...document.querySelectorAll('.hole')]
 const scoreEl = document.querySelector('.score span')
 const timerEl = document.querySelector('.timer span')
 const resetBtn = document.querySelector('.rst-btn')
-const popup = document.querySelector('.popup')
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
 let timeLeft = 60
@@ -48,7 +47,6 @@ window.addEventListener('mouseup',() =>{
 })
 
 resetBtn.addEventListener('click',resetGame)
-popup.addEventListener('click', closeScore)
 /*-------------------------------- Functions --------------------------------*/
 
 //function to grab different songy
@@ -60,13 +58,10 @@ function getRandoSong (soundGroup) {
 // pop up
 function showScore() {
   const finalScore = score
-  popup.textContent = `YOUR SCORE IS: ${finalScore}`
-  popup.style.display = "flex"
+  alert(`YOUR SCORE IS: ${finalScore}`)
+
 }
 
-function closeScore() {
-  popup.style.display = "none"
-}
 
 function run() {
   const i = Math.floor(Math.random()* holes.length)
@@ -127,8 +122,8 @@ function endGame() {
       hole.removeChild(dogImg)
     }
   })
-  clearTimeout(timer)
-  clearInterval(intervalID)
+  clearTimeout()
+  clearInterval()
   showScore()
   resetBtn.style.display = 'block'
 }
