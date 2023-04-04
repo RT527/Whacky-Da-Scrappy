@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-/* const dogs = { 
+const dogs = { 
   Scooby: {
     image: 'Scrappy_files/Scooby-happy.png',
     whackedImage: 'Scrappy_files/Scooby-hurt.png',
@@ -23,7 +23,7 @@ const sounds = {
     'Scrappy_files/Scrappy-2.mp3',
     'Scrappy_files/Scrappy-3.mp3'
   ]
-} */
+} 
 /*------------------------ Cached Element References ------------------------*/
 const cursor = document.querySelector('.cursor')
 const holes = [...document.querySelectorAll('.hole')]
@@ -54,10 +54,12 @@ function run() {
   const i = Math.floor(Math.random()* holes.length)
   const hole = holes[i]
   let timer = null
+  //Choose between Scooby and Scrappy 
+  const dog = Math.random()<0.5? 'Scooby' : 'Scrappy'
   //Create scrappy and scooby images
   const img = document.createElement('img')
   img.classList.add('dog')
-  img.src = 'Scrappy_files/Scrappy-happy.png' 
+  img.src = dogs[dog].image
 }
 
 
