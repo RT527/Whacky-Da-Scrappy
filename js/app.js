@@ -45,11 +45,20 @@ window.addEventListener('mouseup',() =>{
   cursor.classList.remove('active')
 })
 /*-------------------------------- Functions --------------------------------*/
-const sound = new Audio('Scrappy_files/Scrappy-1.mp3')
+
+//function to grab different songy
+function getRandoSong (soundGroup) {
+  const songs = sounds[soundGroup]
+  const s = Math.floor(Math.random()* songs.length)
+  return songs[s]
+}
+//const sound = new Audio('Scrappy_files/Scrappy-1.mp3')
 //testing noise
 window.addEventListener('click', ()=> {
+  const sound = new Audio(getRandoSong('Scooby'))
   sound.play()
 })
+
 function run() {
   const i = Math.floor(Math.random()* holes.length)
   const hole = holes[i]
@@ -60,6 +69,7 @@ function run() {
   const img = document.createElement('img')
   img.classList.add('dog')
   img.src = dogs[dog].image
-}
+  // event listner when user clicks any of the doggys
 
+}
 
