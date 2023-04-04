@@ -73,6 +73,31 @@ body{
     transform: translateX(-50%) translateY(0);
   }
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popup p {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+.popup button {
+  padding: 1em;
+  font-size: 1.5em;
+  background-color: aqua;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 
 

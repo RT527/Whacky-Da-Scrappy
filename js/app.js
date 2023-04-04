@@ -45,6 +45,8 @@ window.addEventListener('mousedown',() =>{
 window.addEventListener('mouseup',() =>{
   cursor.classList.remove('active')
 })
+
+resetBtn.addEventListener('click',resetGame)
 /*-------------------------------- Functions --------------------------------*/
 
 //function to grab different songy
@@ -56,8 +58,9 @@ function getRandoSong (soundGroup) {
 // pop up
 function showScore() {
   const popup = document.createElement('div')
+  const finalScore = score
   popup.classList.add('popup')
-  popup.textContent = `YOUR SCORE IS: ${score}`
+  popup.textContent = `YOUR SCORE IS: ${finalScore}`
   document.body.appendChild(popup)
 }
 
@@ -99,7 +102,7 @@ function updateTimer(time) {
 }
 
 function startTimer(dur) {
-  let timeLeft = dur
+  timeLeft = dur
   updateTimer(timeLeft)
 
   const intervalID = setInterval(()=> {
@@ -120,8 +123,8 @@ function endGame() {
       hole.removeChild(dogImg)
     }
   })
-  clearTimeout()
-  clearInterval()
+  clearTimeout(timer)
+  clearInterval(intervalID)
   resetBtn.style.display = 'block'
   showScore()
 }
@@ -133,6 +136,10 @@ function resetGame(){
 
   run()
   startTimer(60)
+  const popup = document.querySelector('.popup')
+  if (popup) {
+    document.body.removeChild(popup)
+  }
 }
 
 run()
