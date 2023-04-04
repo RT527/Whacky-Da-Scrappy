@@ -29,7 +29,7 @@ const cursor = document.querySelector('.cursor')
 const holes = [...document.querySelectorAll('.hole')]
 const scoreEl = document.querySelector('.score span')
 const timerEl = document.querySelector('.timer span')
-const resetBtn = document.querySelector('rst-btn')
+const resetBtn = document.querySelector('.rst-btn')
 /*---------------------------- Variables (state) ----------------------------*/
 let score = 0
 let timeLeft = 60
@@ -112,5 +112,26 @@ function startTimer(dur) {
   },999)
 }
 
-run()
+function endGame() {
+  holes.forEach(hole=> {
+    const dogImg = hole.querySelector('.dog')
+    if (dogImg) {
+      hole.removeChild(dogImg)
+    }
+  })
+  clearTimeout()
+  clearInterval()
+  resetBtn.style.display = 'block'
+}
 
+function resetGame(){
+  resetBtn.style.display = 'none'
+  score = 0
+  scoreEl.textContent = score
+
+  run()
+  startTimer(60)
+}
+
+run()
+startTimer(60)
