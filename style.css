@@ -6,8 +6,10 @@ html, body{
   height: 100%;
 }
 body{
-  font-family: 'Times New Roman', Times, serif;
-  background-color:darksalmon;
+  background-image: url('Scrappy_files/scooby-doo-and-shaggy-ultra-instinct-mc8dt9ozaptjxl6k.jpg');
+  background-size:inherit;
+  background-color: black;
+  background-position: center center;
   color:blueviolet;
   display: flex;
   flex-direction: column;
