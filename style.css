@@ -14,9 +14,17 @@ body{
   align-items: center;
   justify-content: center;
 }
+.title{
+  margin-bottom: .5em;
+  font-size: 5em;
+  color:aqua;
+  font-family: 'Press Start 2P', cursive;
+}
 .score{
+  font-family: 'Creepster', cursive;
   font-size: 4.5em;
   margin-bottom: .5em;
+  color: green;
 }
 .cursor{
   background-image: url('Scrappy_files/hammer.png');

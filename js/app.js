@@ -54,10 +54,10 @@ function getRandoSong (soundGroup) {
 }
 //const sound = new Audio('Scrappy_files/Scrappy-1.mp3')
 //testing noise
-window.addEventListener('click', ()=> {
+/* window.addEventListener('click', ()=> {
   const sound = new Audio(getRandoSong('Scooby'))
   sound.play()
-})
+}) */
 
 function run() {
   const i = Math.floor(Math.random()* holes.length)
@@ -70,6 +70,26 @@ function run() {
   img.classList.add('dog')
   img.src = dogs[dog].image
   // event listner when user clicks any of the doggys
+  img.addEventListener('click', ()=> {
+    score += dogs[dog].score
+    const soundGroup = dogs[dog].soundGroup
+    const sound = new Audio(getRandoSong(soundGroup))
+    sound.play()
+    scoreEl.textContent = score
+    img.src = dogs[dog].whackedImage
+    clearTimeout(timer)
+    setTimeout(()=> {
+      hole.removeChild(img)
+      run()
+    },555)
+  })
+  hole.appendChild(img)
 
+  timer = setTimeout(() => {
+    hole.removeChild(img)
+    run()
+  }, 1527);
 }
+
+run()
 
