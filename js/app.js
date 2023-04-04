@@ -53,12 +53,13 @@ function getRandoSong (soundGroup) {
   const s = Math.floor(Math.random()* songs.length)
   return songs[s]
 }
-//const sound = new Audio('Scrappy_files/Scrappy-1.mp3')
-//testing noise
-/* window.addEventListener('click', ()=> {
-  const sound = new Audio(getRandoSong('Scooby'))
-  sound.play()
-}) */
+// pop up
+function showScore() {
+  const popup = document.createElement('div')
+  popup.classList.add('popup')
+  popup.textContent = `YOUR SCORE IS: ${score}`
+  document.body.appendChild(popup)
+}
 
 function run() {
   const i = Math.floor(Math.random()* holes.length)
@@ -122,6 +123,7 @@ function endGame() {
   clearTimeout()
   clearInterval()
   resetBtn.style.display = 'block'
+  showScore()
 }
 
 function resetGame(){
