@@ -117,6 +117,46 @@ button:active {
   transform: translateY(4px);
 }
 
+@media screen and (max-width: 768px) {
+  .board {
+    height: 80vw ;
+    width: 80vw;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .hole {
+    border-radius: 50%;
+  }
+
+  .hole .dog { 
+    width: 40%;
+  }
+
+  .title {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .score-timer {
+    justify-content: space-around;
+  }
+
+  .score {
+    font-size: 3em;
+  }
+
+  .timer {
+    font-size: 3em;
+  }
+  
+  button {
+    font-size: 1.5em;
+    padding: 15px 4px;
+  }
+}
+
 
 
 
