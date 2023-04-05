@@ -11,6 +11,24 @@ const dogs = {
     whackedImage: 'Scrappy_files/Scrappy-hurt.png',
     score: 10,
     soundGroup: 'Scrappy'
+  },
+  Sea : {
+    image: 'Scrappy_files/sea-monster.png',
+    whackedImage: 'Scrappy_files/sea-monster-dead.png',
+    score: 25,
+    soundGroup: 'Sea'
+  },
+  Pumpkin : {
+    image: 'Scrappy_files/pumkin-head.png',
+    whackedImage: 'Scrappy_files/pumkin-head-dead.png',
+    score: 20,
+    soundGroup: 'Pumpkin'
+  },
+  Dracula : {
+    image: 'Scrappy_files/dracula.png',
+    whackedImage: 'Scrappy_files/dracula-dead.png',
+    score: 50,
+    soundGroup: 'Dracula'
   }
 }
 const sounds = {
@@ -22,6 +40,18 @@ const sounds = {
     'Scrappy_files/Scrappy-1.mp3',
     'Scrappy_files/Scrappy-2.mp3',
     'Scrappy_files/Scrappy-3.mp3'
+  ],
+  Sea: [
+    'Scrappy_files/Sea-1.mp3',
+    'Scrappy_files/Sea-2.mp3'
+  ],
+  Pumpkin: [
+    'Scrappy_files/Pumpkin-1.mp3',
+    'Scrappy_files/Pumpkin-2.mp3'
+  ],
+  Dracula: [
+    'Scrappy_files/Dracula-1.mp3',
+    'Scrappy_files/Dracula-2.mp3'
   ]
 } 
 /*------------------------ Cached Element References ------------------------*/
@@ -70,19 +100,22 @@ function run() {
   const hole = holes[i]
   let timer = null
   //Choose between Scooby and Scrappy 
-  const dog = Math.random()<0.5? 'Scooby' : 'Scrappy'
+  //const dog = Math.random()<0.5? 'Scooby' : 'Scrappy'
+  const dogNames = Object.keys(dogs)
+  const dogIndex = Math.floor(Math.random()*dogNames.length)
+  const dog = dogs[dogNames[dogIndex]]
   //Create scrappy and scooby images
   const img = document.createElement('img')
   img.classList.add('dog')
-  img.src = dogs[dog].image
+  img.src = dog.image
   // event listner when user clicks any of the doggys
   img.addEventListener('click', ()=> {
-    score += dogs[dog].score
-    const soundGroup = dogs[dog].soundGroup
+    score += dog.score
+    const soundGroup = dog.soundGroup
     const sound = new Audio(getRandoSong(soundGroup))
     sound.play()
     scoreEl.textContent = score
-    img.src = dogs[dog].whackedImage
+    img.src = dog.whackedImage
     clearTimeout(timer)
     setTimeout(()=> {
       hole.removeChild(img)
