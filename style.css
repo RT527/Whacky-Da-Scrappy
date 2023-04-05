@@ -103,7 +103,7 @@ button{
   padding: 20px 8px;
   border-radius: 15px;
   transition-duration: 0.4s;
-  width: 50%;
+  width: 35%;
 }
 
 button:hover {
@@ -118,6 +118,15 @@ button:active {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    background-size:cover;
+    background-color: black;
+    background-position: left 25% center ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .board {
     height: 80vw ;
     width: 80vw;
@@ -140,7 +149,7 @@ button:active {
   }
 
   .score-timer {
-    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .score {
@@ -153,7 +162,7 @@ button:active {
   
   button {
     font-size: 1.5em;
-    padding: 15px 4px;
+    width: 85%;
   }
 }
 
