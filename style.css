@@ -137,6 +137,7 @@ button:active {
 
   .hole {
     border-radius: 50%;
+    outline: 4px solid whitesmoke;
   }
 
   .hole .dog { 
