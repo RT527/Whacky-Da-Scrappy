@@ -1,6 +1,5 @@
 # Whacky-Da-Scrappy
-A scooby-doo theme "whack-a-mole" game
-https://docs.google.com/document/d/1yPZxdJ28_yN_P5rJ_4jUrJgopEEl4Qx_1qAe1SYmntc/edit?usp=sharing
+**Link** https://whacky-da-scrappy.netlify.app/
 
 ![Game-Screenshot-min](https://user-images.githubusercontent.com/126704408/230446815-02fad672-dfb2-4efc-a069-5cda23352ebd.png)
 
