@@ -1,6 +1,5 @@
 # Whacky-Da-Scrappy
 A scooby-doo theme "whack-a-mole" game
-https://docs.google.com/document/d/1yPZxdJ28_yN_P5rJ_4jUrJgopEEl4Qx_1qAe1SYmntc/edit?usp=sharing
 
 Screenshot: A screenshot of your game.
 Whacky-Da-Scrappy - I chose to make this game because I was reading a comic book about Scooby Doo in a apocalyptic world, and in it there was a character named Scrappy. I really don't like Scrappy for many reasons so I made this game to express my frustration and have a bit of fun. 
