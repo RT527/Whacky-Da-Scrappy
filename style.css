@@ -93,7 +93,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  width: 27%;
+  width: 23%;
 }
   /*add pop in noises*/
 @keyframes rise {
