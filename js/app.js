@@ -92,7 +92,7 @@ function showScore() {
     ? `YOU LOSE!! NO SCOOBY SNACKS! YOUR SCORE IS: ${finalScore}`
     : `YOU WIN!! HERE'S YOUR SCOOBY SNACK !🍪 YOUR SCORE IS: ${finalScore}`)
   const popUpClose = document.createElement('button')
-  const popUpCloseText = document.createTextNode('Close')
+  const popUpCloseText = document.createTextNode('CLOSE')
 
   popUp.appendChild(popUpContent)
   popUpClose.appendChild(popUpCloseText)
