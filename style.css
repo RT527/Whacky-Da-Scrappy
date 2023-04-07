@@ -156,6 +156,13 @@ button:active {
     width: 60%;
   }
 
+  .pop-up_close {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 33%;
+  }
+
   .title {
     font-size: 2.5em;
     text-align: center;
