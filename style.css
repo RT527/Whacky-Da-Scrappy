@@ -93,7 +93,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  width: 23%;
+  width: 15%;
 }
   /*add pop in noises*/
 @keyframes rise {
@@ -106,16 +106,17 @@ body{
 }
 button{
   color:black;
-  font-size: larger;
+  font-size: xx-large;
   margin: 4px 2px;
   cursor:pointer;
   background-color:white;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 8px;
+  padding: 10px 8px;
   border-radius: 15px;
   transition-duration: 0.4s;
-  width: 35%;
+  width: 37%;
+  font-family:monospace;
 }
 
 button:hover {
