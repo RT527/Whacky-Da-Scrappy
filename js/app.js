@@ -84,27 +84,36 @@ function getRandoSong (soundGroup) {
   const s = Math.floor(Math.random()* songs.length)
   return songs[s]
 }
-// pop up
+
 function showScore() {
   const finalScore = score
-  if (score <= 0) {
-    alert(`YOU LOSE!! NO SCOOBY SNACKS! YOUR SCORE IS: ${finalScore}`)
-  } else {
-    alert(`YOU WIN!! HERE'S YOUR SCOOBY SNACK !🍪 YOUR SCORE IS: ${finalScore}`)
-  }
+  const popUp = document.createElement('div')
+  const popUpContent = document.createTextNode(score <= 0
+    ? `YOU LOSE!! NO SCOOBY SNACKS! YOUR SCORE IS: ${finalScore}`
+    : `YOU WIN!! HERE'S YOUR SCOOBY SNACK !🍪 YOUR SCORE IS: ${finalScore}`)
+  const popUpClose = document.createElement('button')
+  const popUpCloseText = document.createTextNode('Close')
+
+  popUp.appendChild(popUpContent)
+  popUpClose.appendChild(popUpCloseText)
+  popUp.appendChild(popUpClose)
+  popUp.classList.add('pop-up')
+  popUpClose.classList.add('pop-up_close')
+
+  document.body.appendChild(popUp)
+
+  popUpClose.addEventListener('click', () => {
+    popUp.remove()
+  })
 }
 
-
-function run() {
+function gameStart() {
   const i = Math.floor(Math.random()* holes.length)
   const hole = holes[i]
   let timer = null
-  //Choose between Scooby and Scrappy 
-  //const dog = Math.random()<0.5? 'Scooby' : 'Scrappy'
   const dogNames = Object.keys(dogs)
   const dogIndex = Math.floor(Math.random()*dogNames.length)
   const dog = dogs[dogNames[dogIndex]]
-  //Create scrappy and scooby images
   const img = document.createElement('img')
   img.classList.add('dog')
   img.src = dog.image
@@ -119,14 +128,14 @@ function run() {
     clearTimeout(timer)
     setTimeout(()=> {
       hole.removeChild(img)
-      run()
+      gameStart()
     },555)
   })
   hole.appendChild(img)
 
   timer = setTimeout(() => {
     hole.removeChild(img)
-    run()
+    gameStart()
   }, 1527);
 }
 //timer functions
@@ -168,9 +177,9 @@ function resetGame(){
   score = 0
   scoreEl.textContent = score
 
-  run()
+  gameStart()
   startTimer(60)
 }
 
-run()
+gameStart()
 startTimer(60)
