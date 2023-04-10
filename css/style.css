@@ -6,7 +6,7 @@ html, body{
   height: 100%;
 }
 body{
-  background-image: url('Scrappy_files/scooby-doo-and-shaggy-ultra-instinct-mc8dt9ozaptjxl6k.jpg');
+  background-image: url('../assets/scooby-doo-and-shaggy-ultra-instinct-mc8dt9ozaptjxl6k.jpg');
   background-size:inherit;
   background-color: black;
   background-position: center center;
@@ -45,7 +45,7 @@ body{
   display: inline-block;
 }
 .cursor{
-  background-image: url('Scrappy_files/hammer.png');
+  background-image: url('../assets/hammer.png');
   background-size: 100% 100%;
   height: 100px;
   width: 80px;

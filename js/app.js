@@ -1,57 +1,57 @@
 /*-------------------------------- Constants --------------------------------*/
 const dogs = { 
   Scooby: {
-    image: 'Scrappy_files/Scooby-happy.png',
-    whackedImage: 'Scrappy_files/Scooby-hurt.png',
+    image: 'assets/Scooby-happy.png',
+    whackedImage: 'assets/Scooby-hurt.png',
     score: -10,
     soundGroup: 'Scooby'
   },
   Scrappy : {
-    image: 'Scrappy_files/Scrappy-happy.png',
-    whackedImage: 'Scrappy_files/Scrappy-hurt.png',
+    image: 'assets/Scrappy-happy.png',
+    whackedImage: 'assets/Scrappy-hurt.png',
     score: 10,
     soundGroup: 'Scrappy'
   },
   Sea : {
-    image: 'Scrappy_files/sea-monster.png',
-    whackedImage: 'Scrappy_files/sea-monster-dead.png',
+    image: 'assets/sea-monster.png',
+    whackedImage: 'assets/sea-monster-dead.png',
     score: 25,
     soundGroup: 'Sea'
   },
   Pumpkin : {
-    image: 'Scrappy_files/pumkin-head.png',
-    whackedImage: 'Scrappy_files/pumkin-head-dead.png',
+    image: 'assets/pumkin-head.png',
+    whackedImage: 'assets/pumkin-head-dead.png',
     score: 20,
     soundGroup: 'Pumpkin'
   },
   Dracula : {
-    image: 'Scrappy_files/dracula.png',
-    whackedImage: 'Scrappy_files/dracula-dead.png',
+    image: 'assets/dracula.png',
+    whackedImage: 'assets/dracula-dead.png',
     score: 50,
     soundGroup: 'Dracula'
   }
 }
 const sounds = {
   Scooby: [
-    'Scrappy_files/Scooby-1.mp3',
-    'Scrappy_files/Scooby-2.mp3'
+    'assets/Scooby-1.mp3',
+    'assets/Scooby-2.mp3'
   ],
   Scrappy: [
-    'Scrappy_files/Scrappy-1.mp3',
-    'Scrappy_files/Scrappy-2.mp3',
-    'Scrappy_files/Scrappy-3.mp3'
+    'assets/Scrappy-1.mp3',
+    'assets/Scrappy-2.mp3',
+    'assets/Scrappy-3.mp3'
   ],
   Sea: [
-    'Scrappy_files/Sea-1.mp3',
-    'Scrappy_files/Sea-2.mp3'
+    'assets/Sea-1.mp3',
+    'assets/Sea-2.mp3'
   ],
   Pumpkin: [
-    'Scrappy_files/Pumpkin-1.mp3',
-    'Scrappy_files/Pumpkin-2.mp3'
+    'assets/Pumpkin-1.mp3',
+    'assets/Pumpkin-2.mp3'
   ],
   Dracula: [
-    'Scrappy_files/Dracula-1.mp3',
-    'Scrappy_files/Dracula-2.mp3'
+    'assets/Dracula-1.mp3',
+    'assets/Dracula-2.mp3'
   ]
 } 
 /*------------------------ Cached Element References ------------------------*/
